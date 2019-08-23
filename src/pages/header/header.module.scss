@@ -5,9 +5,9 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(10rem, 20rem));
   grid-template-rows: auto;
+  border-bottom: 1px solid lighten($lightgrey, 5%);
   
-  background: rgba(255, 255, 255, 0.6);
-
+  // background: rgba(255, 255, 255, 0.6);
   &:hover {
     background: $white;
     transition: background-color 300ms ease-in;
@@ -23,18 +23,27 @@
 
 // LOGO SECTION
 .logoContainer {
-
   .logo {
     font-family: $title-font;
     font-size: 4rem;
+  }
+
+  .logoLink {
+    color: $secondary-color;
+
+    &:hover {
+      color: $black;
+      transition: color 300ms ease-in;
+    }
   }
 }
 
 // LINK SECTION
 .linksContainer {
-  border: 1px solid black;
+  // border: 1px solid black;
   grid-column: 2 / -1;
   max-width: 100%;
+  text-transform: uppercase;
 
   .links {
     list-style: none;
@@ -43,7 +52,19 @@
     align-items: center;
 
     .link {
+      color: $black;
       margin-right: 2rem;
+      font-family: $primary-font;
+      letter-spacing: 0.25px;
+
+      &:hover {
+        color: $secondary-color;
+        transition: color 250ms ease-in;
+      }
+    }
+
+    .isActive {
+      // font-weight: bold;
     }
   }
 }

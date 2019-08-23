@@ -1,0 +1,30 @@
+@import '../../styles/global.styles';
+
+.carticon {
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+  font-size: 1.7rem;
+  cursor: pointer;
+
+  .icon {
+    &:hover {
+      color: $secondary-color;
+      transition: color 300ms ease-in;
+    }
+  }
+
+  .totals {
+
+    .quantity {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+
+@media screen and (min-width: 500px) {
+  .carticon {
+    font-size: 1.9rem;
+  }
+}

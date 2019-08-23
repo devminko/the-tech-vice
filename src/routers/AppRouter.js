@@ -19,7 +19,7 @@ const AppRouter = () => {
       <div className={style.container}>
         <BrowserRouter>
         <div className={style.content}>
-          {/* <Header /> */}
+          <Header />
           <Switch>
             <Route exact path='/' component={HomePage} />
           </Switch>

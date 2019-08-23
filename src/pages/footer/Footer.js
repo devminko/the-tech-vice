@@ -10,35 +10,28 @@ const Footer = () => {
     <div className={style.footer}>
       
       <div className={style.logoContainer}>
-        <span className={style.logo}><Link to='/'>TechVice</Link></span>
+        <span className={style.logo}><Link to='/' className={style.logoLink}>TechVice</Link></span>
       </div>
 
       <div className={style.linksContainer}>
         <div className={style.links}>
           <span className={style.title}>Who We Are</span>
           <span>
-            <Link to='/' className={style.link}>About Us</Link>
+            <Link to='/about' className={style.link}>About Us</Link>
           </span>
         </div>
 
         <div className={style.links}>
           <span className={style.title}>Work With Us</span>
           <span>
-            <Link to='/' className={style.link}>Your Brand</Link>
-          </span>
-        </div>
-
-        <div className={style.links}>
-          <span className={style.title}>Who We Are</span>
-          <span>
-            <Link to='/' className={style.link}>About Us</Link>
+            <Link to='/connect' className={style.link}>Your Brand</Link>
           </span>
         </div>
 
         <div className={style.links}>
           <span className={style.title}>Help Desk</span>
           <span>
-            <Link to='/' className={style.link}>Contact Us</Link>
+            <Link to='/contact' className={style.link}>Contact Us</Link>
           </span>
         </div>
 
