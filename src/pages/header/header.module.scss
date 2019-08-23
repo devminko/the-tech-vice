@@ -1,0 +1,63 @@
+@import '../../styles/global.styles';
+
+// HEADER
+.header {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(10rem, 20rem));
+  grid-template-rows: auto;
+  
+  background: rgba(255, 255, 255, 0.6);
+
+  &:hover {
+    background: $white;
+    transition: background-color 300ms ease-in;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .header {
+    display: block;
+    text-align: center;
+  }
+}
+
+// LOGO SECTION
+.logoContainer {
+
+  .logo {
+    font-family: $title-font;
+    font-size: 4rem;
+  }
+}
+
+// LINK SECTION
+.linksContainer {
+  border: 1px solid black;
+  grid-column: 2 / -1;
+  max-width: 100%;
+
+  .links {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    .link {
+      margin-right: 2rem;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .linksContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    .links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

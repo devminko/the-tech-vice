@@ -1,0 +1,19 @@
+@import '../styles/global.styles';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  max-width: 1200px;
+  margin: 0 auto;
+
+  // display: grid;
+  // grid-template-columns: 20rem 1fr 20rem;
+  // grid-template-rows: auto 1fr auto;
+  // height: 100vh;
+}
+
+.content {
+  flex-grow: 1;
+}

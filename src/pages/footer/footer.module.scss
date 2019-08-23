@@ -1,0 +1,127 @@
+@import '../../styles/global.styles';
+
+// FOOTER
+.footer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(10rem, 20rem));
+  grid-template-rows: auto;
+  min-height: 20rem;
+  border-top: 1px solid $lightgrey;
+
+  background: rgba(255, 255, 255, 0.6);
+}
+
+@media screen and (max-width: 500px) {
+  .footer {
+    display: block;
+    text-align: center;
+  }
+}
+
+// LOGO SECTION
+.logoContainer {
+
+  .logo {
+    font-family: $title-font;
+    font-size: 4rem;
+  }
+}
+
+// LINKS SECTION
+.linksContainer {
+  // border: 1px solid black;
+  grid-column: 2 / -1;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+
+  .links {
+    display: flex;
+    flex-direction: column;
+
+    .title {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 0.5rem;
+    }
+
+    .link {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .socialLinks {
+    display: flex;
+    flex-direction: column;
+
+    .title {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 0.5rem;
+    }
+
+    .icons {
+      .instagram {
+        font-size: 2rem;
+        color: $black;
+        margin-right: 1.5rem;
+        &:hover {
+          color: lighten(purple, 10%);
+          transition: color 300ms ease-in;
+        }
+      }
+
+      .twitter {
+        font-size: 2rem;
+        color: $black;
+        margin-right: 1.5rem;
+        &:hover {
+          color: #3D9BEE;
+          transition: color 300ms ease-in;
+        }
+      }
+
+      .youtube {
+        font-size: 2rem;
+        color: $black;
+        // margin-right: 1.5rem;
+        &:hover {
+          color: #FF0000;
+          transition: color 300ms ease-in;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .linksContainer {
+    height: auto;
+    font-size: 1.4rem;
+
+    .socialLinks {
+      .icons {
+        display: flex;
+        justify-content: center;
+        .instagram {
+          font-size: 1.4rem;
+          margin-right: 1px;
+          text-align: center;
+        }
+
+        .twitter {
+          font-size: 1.4rem;
+          margin-right: 1px;
+          text-align: center;
+        }
+
+        .youtube {
+          font-size: 1.4rem;
+          margin-right: 1px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

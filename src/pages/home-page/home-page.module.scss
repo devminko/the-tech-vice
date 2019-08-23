@@ -1,0 +1,13 @@
+@import '../../styles/global.styles';
+
+.homepage {
+  background: $grey;
+  border-bottom: 1px solid $lightgrey;
+
+  height: 45vh; 
+
+  // background-image: url('../../assets/keyboard_one.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
