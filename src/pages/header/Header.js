@@ -18,16 +18,16 @@ const Header = () => {
         <nav>
           <ul className={style.links}>
             <li>
-              <NavLink to='/' className={style.link} activeClassName={style.isActive}>Shop</NavLink>
+              <NavLink to='/shop' className={style.link} activeClassName={style.isActive}>Shop</NavLink>
             </li>
             <li>
-              <NavLink to='/' className={style.link} activeClassName={style.isActive}>News</NavLink>
+              <NavLink to='/news' className={style.link} activeClassName={style.isActive}>News</NavLink>
             </li>
             <li>
-              <NavLink to='/' className={style.link} activeClassName={style.isActive}>Who We Are</NavLink>
+              <NavLink to='/about' className={style.link} activeClassName={style.isActive}>About Us</NavLink>
             </li>
             <li>
-              <NavLink to='/' className={style.link} activeClassName={style.isActive}>Sign In</NavLink>
+              <NavLink to='/signin' className={style.link} activeClassName={style.isActive}>Sign In</NavLink>
             </li>
             <CartIcon />
           </ul>

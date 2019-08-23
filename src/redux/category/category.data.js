@@ -1,0 +1,35 @@
+export const CATEGORY_DATA = [
+  {
+    id: 1,
+    title: 'Keyboards',
+    subtitle: 'Free USA Shipping and Returns',
+    imageUrl: 'https://mechanicalkeyboards.com/shop/images/products/large_DKON1861ST-USPDAZT1_9.png',
+    // imageUrl: 'https://mechanicalkeyboards.com/shop/images/products/large_DKON1861ST-USPDZZT1_2.jpg',
+    routeUrl: 'shop/keyboards',
+  },
+  {
+    id: 1,
+    title: 'Keycaps',
+    subtitle: 'Free USA Shipping and Returns Free',
+    // imageUrl: 'https://mechanicalkeyboards.com/shop/images/products/large_4282_large_DKSA108-USPDBBWOG_6.jpg',
+    imageUrl: 'https://mechanicalkeyboards.com/shop/images/products/large_4342_large_T01M003_1.jpg',
+    // imageUrl: 'https://mechanicalkeyboards.com/shop/images/products/large_022C03PK102_main.jpg',
+    routeUrl: 'shop/keycaps',
+  },
+  {
+    id: 1,
+    title: 'Switches',
+    subtitle: 'Free USA Shipping and Returns',
+    // imageUrl: 'https://mechanicalkeyboards.com/shop/images/products/large_ZLHeal_main.jpg',
+    imageUrl: 'https://cdn.shopify.com/s/files/1/0549/2681/products/mechanical-keyboard-switches-mx-switches-1.jpg?v=1525907493',
+    routeUrl: 'shop/switches',
+  },
+  {
+    id: 1,
+    title: 'Accessories',
+    subtitle: 'Free USA Shipping and Returns',
+    imageUrl: 'https://mechanicalkeyboards.com/shop/images/products/large_ZDB007-01_main.jpg',
+    // imageUrl: 'https://mechanicalkeyboards.com/shop/images/products/large_22E018-1_main.jpg',
+    routeUrl: 'shop/accessories',
+  },
+];

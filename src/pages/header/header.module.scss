@@ -5,7 +5,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(10rem, 20rem));
   grid-template-rows: auto;
-  border-bottom: 1px solid lighten($lightgrey, 5%);
+  border-bottom: 1px solid lighten($lightgrey, 6%);
   
   // background: rgba(255, 255, 255, 0.6);
   &:hover {
@@ -23,13 +23,18 @@
 
 // LOGO SECTION
 .logoContainer {
+
   .logo {
     font-family: $title-font;
     font-size: 4rem;
   }
 
   .logoLink {
-    color: $secondary-color;
+    // color: $secondary-color;
+    color: $black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     &:hover {
       color: $black;
@@ -53,8 +58,11 @@
 
     .link {
       color: $black;
-      margin-right: 2rem;
-      font-family: $primary-font;
+      margin-right: 3rem;
+      // font-family: $primary-font;
+      font-family: $source-sans-font;
+      // font-family: $raleway-font;
+      font-weight: bold;
       letter-spacing: 0.25px;
 
       &:hover {
@@ -79,6 +87,10 @@
       display: flex;
       justify-content: center;
       align-items: center;
+
+      .link {
+        margin-right: 2rem;
+      }
     }
   }
 }

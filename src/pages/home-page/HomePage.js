@@ -1,6 +1,7 @@
 import React, { } from 'react';
 
-import Header from '../header/Header';
+import HomeLanding from '../../components/home-landing/HomeLanding';
+import HomeProducts from '../../components/home-products/HomeProducts';
 
 import style from './home-page.module.scss';
 
@@ -8,8 +9,10 @@ import style from './home-page.module.scss';
 const HomePage = () => {
   return (
     <div className={style.homepage}>
-      {/* <Header /> */}
-      HOME PAGE
+
+      <HomeLanding />
+      <HomeProducts />
+      
     </div>
   )
 };

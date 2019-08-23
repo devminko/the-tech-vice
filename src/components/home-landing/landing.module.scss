@@ -1,0 +1,30 @@
+@import '../../styles/global.styles';
+
+.landing {
+  height: 40vh;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+
+  border-bottom: 1px solid lighten($lightgrey, 7%);
+}
+
+.image {
+  grid-column: 2 / -1;
+  grid-row: 1 / -1;
+
+  background-image: url('../../assets/landing_one.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 500px) {
+  .landing {
+    height: 30vh;
+  }
+
+  .image {
+    grid-column: 3 / -1;
+  }
+}
