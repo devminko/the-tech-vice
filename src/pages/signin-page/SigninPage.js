@@ -9,7 +9,9 @@ const SigninPage = () => {
   return (
     <div className={style.signinpage}>
 
-      <SignIn />
+      <div className={style.container}>
+        <SignIn />
+      </div>
 
     </div>
   )

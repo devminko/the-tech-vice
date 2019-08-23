@@ -1,0 +1,54 @@
+@import '../../styles/global.styles';
+
+.button {
+  text-transform: uppercase;
+  width: 24rem;
+  height: 4rem;
+  letter-spacing: 0.5px;
+  font-family: $primary-font;
+
+  background: $white;
+  color: $black;
+  border: 1px solid $black;
+
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+  
+  &:hover {
+    border: none;
+    background: $black;
+    color: $white;
+  }
+
+  &.google {
+    background: $white;
+    color: #4285F4;
+    border: 1px solid #4285F4;
+    
+    &:hover {
+      background: #4285F4;
+      color: $white;
+      border: none;
+    }
+  }
+
+  &.inverted {
+    border: none;
+    background: $black;
+    color: $white;
+
+    &:hover {
+      background: $white;
+      color: $black;
+      border: 1px solid $black;
+    }
+  }
+}
+
+// MEDIA QUERIES
+@media screen and (max-width: 500px) {
+  .button {
+    width: auto;
+    font-size: 1.2rem;
+  }
+}

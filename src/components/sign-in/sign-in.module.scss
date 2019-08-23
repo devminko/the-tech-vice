@@ -2,10 +2,7 @@
 
 // SIGN IN
 .signin {
-
-  .formContainer {
-    
-  }
+  padding: 1rem;
 }
 
 // HEADER SECTION
@@ -21,7 +18,6 @@
 
   .subtitle {
     text-transform: uppercase;
-    // font-family: $source-sans-font;
     font-weight: lighter;
     margin-top: 0;
     font-size: 1.3rem;
@@ -30,11 +26,17 @@
   }
 }
 
+// BUTTONS SECTION
+.buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
 // MESSAGE SECTION
 .message {
   font-size: 1.3rem;
+  margin-top: 3rem;
   text-align: center;
-  margin-top: 1rem;
 
   .link {
     color: lighten(blue, 10%);
@@ -44,5 +46,11 @@
 
 // MEDIA QUERIES
 @media screen and (max-width: 500px) {
+  .signin {
+    width: 95%;
+  }
 
+  .message {
+    margin-top: 2rem;
+  }
 }
