@@ -2,6 +2,7 @@ import React, { } from 'react';
 
 import HomeLanding from '../../components/home-landing/HomeLanding';
 import HomeProducts from '../../components/home-products/HomeProducts';
+import HomeNews from '../../components/home-news/HomeNews';
 
 import style from './home-page.module.scss';
 
@@ -12,6 +13,7 @@ const HomePage = () => {
 
       <HomeLanding />
       <HomeProducts />
+      <HomeNews />
       
     </div>
   )

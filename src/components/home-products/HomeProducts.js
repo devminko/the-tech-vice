@@ -5,7 +5,7 @@ import ProductsContainer from '../products-container/ProductsContainer';
 
 import style from './products.module.scss';
 
-// *************************** PRODUCTS COMPONENT *************************** //
+// *************************** HOME PRODUCTS COMPONENT *************************** //
 const HomeProducts = () => {
   return (
     <div className={style.products}>

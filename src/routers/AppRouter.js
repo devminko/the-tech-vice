@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import Header from '../pages/header/Header';
 import HomePage from '../pages/home-page/HomePage';
+import SigninPage from '../pages/signin-page/SigninPage';
 import Footer from '../pages/footer/Footer';
 
 import style from './app-router.module.scss';
@@ -22,6 +23,7 @@ const AppRouter = () => {
           <Header />
           <Switch>
             <Route exact path='/' component={HomePage} />
+            <Route path='/signin' component={SigninPage} />
           </Switch>
         </div>
           <Footer />
