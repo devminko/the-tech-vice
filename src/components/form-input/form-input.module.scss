@@ -8,7 +8,7 @@
 
 .group {
   position: relative;
-  margin: 45px 0;
+  margin: 40px 0 30px 0;
 
   .forminput {
     background: none;
@@ -20,7 +20,7 @@
     width: 100%;
     border: none;
     border-radius: 0;
-    border-bottom: 1px solid lighten($black, 20%);
+    border-bottom: 1px solid lighten($secondary-color, 15%);
     margin: 25px 0;
 
     &:focus {
@@ -37,8 +37,8 @@
   }
 
   .formInputLabel {
-    color: $black;
-    font-size: 16px;
+    color: $grey;
+    font-size: 14px;
     font-weight: normal;
     position: absolute;
     pointer-events: none;

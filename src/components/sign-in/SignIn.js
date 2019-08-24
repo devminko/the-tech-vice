@@ -51,7 +51,7 @@ const SignIn = () => {
         </div>
 
         <div className={style.message}>
-          <span>Don't have an account with us yet? <Link to='/signup' className={style.link}>Sign up here!</Link></span>
+          <span>Don't have an account with us yet? <Link to='/signin/signup' className={style.link}>Sign up here!</Link></span>
         </div>
       </form>
 

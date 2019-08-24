@@ -1,38 +1,38 @@
 @import '../../styles/global.styles';
 
-.signinpage {
+.signuppage {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 90%;
 
-  background-image: linear-gradient(rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25)), url('../../assets/background_one.jpg');
+  background-image: linear-gradient(rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25)), url('../../assets/background_two.jpg');
   background-position: center;
   background-size: cover;
 
   .container {
     background: $white;
-    padding: 4rem 1rem;
+    padding: 1.5rem 1rem;
     opacity: 0.85;
   }
 }
 
 // MEDIA QUERIES
 @media screen and (max-width: 500px) {
-  .signinpage {
+  .signuppage {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 78%;
+    height: 82%;
   
-    background-image: linear-gradient(rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25)), url('../../assets/background_one.jpg');
+    background-image: linear-gradient(rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25)), url('../../assets/background_two.jpg');
     background-position: center;
     background-size: cover;
   
     .container {
       background: $white;
-      padding: 2rem 0;
-      opacity: 0.85;
+      padding: 1rem 0;
+      opacity: 0.83;
     }
   }
 }

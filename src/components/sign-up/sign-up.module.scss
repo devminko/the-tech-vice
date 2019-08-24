@@ -1,0 +1,56 @@
+@import '../../styles/global.styles';
+
+// SIGN IN
+.signup {
+  padding: 1rem;
+}
+
+// HEADER SECTION
+.header {
+  text-align: center;
+
+  .title {
+    text-transform: uppercase;
+    font-family: $primary-font;
+    margin-bottom: 0;
+    letter-spacing: 0.5px;
+  }
+
+  .subtitle {
+    text-transform: uppercase;
+    font-weight: lighter;
+    margin-top: 0;
+    font-size: 1.3rem;
+    
+    color: $grey;
+  }
+}
+
+// BUTTONS SECTION
+.buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+// MESSAGE SECTION
+.message {
+  font-size: 1.3rem;
+  margin-top: 3rem;
+  text-align: center;
+
+  .link {
+    color: lighten(blue, 10%);
+    border-bottom: 1px solid lighten(blue, 10%);
+  }
+}
+
+// MEDIA QUERIES
+@media screen and (max-width: 500px) {
+  .signup {
+    width: 95%;
+  }
+
+  .message {
+    margin-top: 2rem;
+  }
+}
