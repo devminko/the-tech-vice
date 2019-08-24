@@ -13,7 +13,7 @@
   grid-column: 2 / -1;
   grid-row: 1 / -1;
 
-  background-image: url('../../assets/landing_one.jpg');
+  background-image: linear-gradient(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.05)), url('../../assets/landing_one.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

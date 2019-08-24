@@ -8,7 +8,7 @@ export const CATEGORY_DATA = [
     routeUrl: 'shop/keyboards',
   },
   {
-    id: 1,
+    id: 2,
     title: 'Keycaps',
     subtitle: 'Free USA Shipping and Returns Free',
     // imageUrl: 'https://mechanicalkeyboards.com/shop/images/products/large_4282_large_DKSA108-USPDBBWOG_6.jpg',
@@ -17,7 +17,7 @@ export const CATEGORY_DATA = [
     routeUrl: 'shop/keycaps',
   },
   {
-    id: 1,
+    id: 3,
     title: 'Switches',
     subtitle: 'Free USA Shipping and Returns',
     // imageUrl: 'https://mechanicalkeyboards.com/shop/images/products/large_ZLHeal_main.jpg',
@@ -25,7 +25,7 @@ export const CATEGORY_DATA = [
     routeUrl: 'shop/switches',
   },
   {
-    id: 1,
+    id: 4,
     title: 'Accessories',
     subtitle: 'Free USA Shipping and Returns',
     imageUrl: 'https://mechanicalkeyboards.com/shop/images/products/large_ZDB007-01_main.jpg',

@@ -1,7 +1,7 @@
 @import '../../styles/global.styles';
 
 // SIGN IN
-.signup {
+.signin {
   padding: 1rem;
 }
 
@@ -29,7 +29,12 @@
 // BUTTONS SECTION
 .buttons {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  
+  button {
+    margin-bottom: 0.5rem;
+  }
 }
 
 // MESSAGE SECTION
@@ -46,12 +51,12 @@
 
 // MEDIA QUERIES
 @media screen and (max-width: 500px) {
-  .signup {
+  .signin {
     width: 95%;
   }
 
   .buttons {
-    flex-direction: column;
+    align-items: stretch;
   }
 
   .message {

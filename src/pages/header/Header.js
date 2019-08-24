@@ -1,12 +1,17 @@
 import React, { } from 'react';
 import { NavLink, Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+
+import { auth } from '../../firebase/firebase.utils';
 
 import CartIcon from '../../components/cart-icon/CartIcon';
 
 import style from './header.module.scss';
 
 // *************************** HEADER COMPONENT *************************** //
-const Header = () => {
+const Header = ({ currentUser }) => {
+  // 'currentUser' passed as prop from redux store
+
   return (
     <div className={style.header}>
     
@@ -27,7 +32,11 @@ const Header = () => {
               <NavLink to='/about' className={style.link} activeClassName={style.isActive}>About Us</NavLink>
             </li>
             <li>
-              <NavLink to='/signin' className={style.link} activeClassName={style.isActive}>Sign In</NavLink>
+              {
+                currentUser
+                ? <span onClick={() => auth.signOut()} className={style.link}>Sign Out</span>
+                : <NavLink to='/signin' className={style.link} activeClassName={style.isActive}>Sign In</NavLink>
+              }
             </li>
             <CartIcon />
           </ul>
@@ -38,4 +47,9 @@ const Header = () => {
   )
 };
 
-export default Header;
+// REDUX
+const mapStateToProps = (state) => ({
+  currentUser: state.user.currentUser,
+});
+
+export default connect(mapStateToProps)(Header);

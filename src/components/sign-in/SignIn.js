@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
+import { auth, signInWithGoogle } from '../../firebase/firebase.utils';
+
 import FormInput from '../form-input/FormInput';
 import Button from '../button/Button';
 
@@ -11,8 +13,15 @@ const SignIn = () => {
   const [ email, setEmail ] = useState('');
   const [ password, setPassword ] = useState('');
 
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
+    try {
+      await auth.signInWithEmailAndPassword(email, password);
+      setEmail('');
+      setPassword('');
+    } catch (error) { 
+      console.log(`Error: ${error}`);
+    }
   };
 
   return (
@@ -47,7 +56,7 @@ const SignIn = () => {
           
         <div className={style.buttons}>
           <Button type='submit'>Sign In With Email</Button>
-          <Button isGoogleSignIn>Sign In With Google</Button>
+          <Button onClick={() => signInWithGoogle()} isGoogleSignIn>Sign In With Google</Button>
         </div>
 
         <div className={style.message}>

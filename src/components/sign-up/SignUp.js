@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
+import { auth, createUserProfileDocument } from '../../firebase/firebase.utils';
+
 import FormInput from '../form-input/FormInput';
 import Button from '../button/Button';
 
@@ -13,8 +15,24 @@ const SignUp = () => {
   const [ password, setPassword ] = useState('');
   const [ confirmPassword, setConfirmPassword ] = useState('');
 
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
+    if (password !== confirmPassword) {
+      alert('Passwords do not match!');
+      return;
+    }
+
+    try {
+      const { user } = await auth.createUserWithEmailAndPassword(email, password);
+      await createUserProfileDocument(user, {displayName});
+
+      setDisplayName('');
+      setEmail('');
+      setPassword('');
+      setConfirmPassword('');
+    } catch (error) {
+      console.log(`Error: ${error}`);
+    }
   };
 
   return (

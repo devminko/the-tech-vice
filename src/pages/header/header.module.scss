@@ -7,7 +7,6 @@
   grid-template-rows: auto;
   border-bottom: 1px solid lighten($lightgrey, 6%);
   
-  // background: rgba(255, 255, 255, 0.6);
   &:hover {
     background: $white;
     transition: background-color 300ms ease-in;
@@ -30,7 +29,6 @@
   }
 
   .logoLink {
-    // color: $secondary-color;
     color: $black;
     display: flex;
     justify-content: center;
@@ -45,7 +43,6 @@
 
 // LINK SECTION
 .linksContainer {
-  // border: 1px solid black;
   grid-column: 2 / -1;
   max-width: 100%;
   text-transform: uppercase;
@@ -64,6 +61,8 @@
       // font-family: $raleway-font;
       font-weight: bold;
       letter-spacing: 0.25px;
+      cursor: pointer;
+      // display: flex;
 
       &:hover {
         color: $secondary-color;
