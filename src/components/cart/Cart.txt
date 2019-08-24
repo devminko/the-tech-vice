@@ -1,0 +1,27 @@
+import React, { } from 'react';
+import { connect } from 'react-redux';
+
+import Button from '../button/Button';
+
+import style from './cart.module.scss';
+
+// *************************** CART COMPONENT *************************** //
+const Cart = ({ currentUser }) => {
+  // 'currentUser' passed as prop via redux
+  return (
+    <div className={style.container}>
+      <div className={style.cart}>
+        <h3 className={style.title}>My Cart</h3>
+
+        <Button>Checkout</Button>
+      </div>
+    </div>
+  )
+};
+
+// REDUX
+const mapStateToProps = (state) => ({
+  currentUser: state.user.currentUser,
+});
+
+export default connect(mapStateToProps)(Cart);

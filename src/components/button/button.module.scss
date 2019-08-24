@@ -1,46 +1,50 @@
 @import '../../styles/global.styles';
 
 .button {
-  text-transform: uppercase;
-  width: 24rem;
+  min-width: 165px;
+  width: auto;
   height: 4rem;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.25px;
+  line-height: 50px;
+  font-size: 12px;
+  background-color: $black;
+  color: $white;
+  border: none;
+  text-transform: uppercase;
   font-family: $primary-font;
+  cursor: pointer;
 
-  background: $white;
-  color: $black;
-  border: 1px solid $black;
-
-  margin-left: 0.25rem;
-  margin-right: 0.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   
   &:hover {
-    border: none;
-    background: $black;
-    color: $white;
+    border: 1px solid $black;
+    background: $white;
+    color: $black;
   }
 
   &.google {
-    background: $white;
-    color: #4285F4;
-    border: 1px solid #4285F4;
+    background: #4285F4;
+    color: $white;
+    border: none;
     
     &:hover {
-      background: #4285F4;
-      color: $white;
-      border: none;
+      background: $white;
+      color: #4285F4;
+      border: 1px solid #4285F4;
     }
   }
 
   &.inverted {
-    border: none;
-    background: $black;
-    color: $white;
-
+    background: $white;
+    color: $black;
+    border: 1px solid $black;
+    
     &:hover {
-      background: $white;
-      color: $black;
-      border: 1px solid $black;
+      border: none;
+      background: $black;
+      color: $white;
     }
   }
 }

@@ -6,7 +6,8 @@
   align-items: center;
   height: 90%;
 
-  background-image: linear-gradient(rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25)), url('../../assets/background_two.jpg');
+  // background-image: linear-gradient(rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25)), url('../../assets/background_two.jpg');
+  background-image: linear-gradient(rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25)), url('../../assets/background_one.jpg');
   background-position: center;
   background-size: cover;
 
@@ -25,14 +26,15 @@
     align-items: center;
     height: 82%;
   
-    background-image: linear-gradient(rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25)), url('../../assets/background_two.jpg');
+    // background-image: linear-gradient(rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25)), url('../../assets/background_two.jpg');
+    background-image: linear-gradient(rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25)), url('../../assets/background_one.jpg');
     background-position: center;
     background-size: cover;
   
     .container {
       background: $white;
       padding: 1rem 0;
-      opacity: 0.83;
+      opacity: 0.85;
     }
   }
 }

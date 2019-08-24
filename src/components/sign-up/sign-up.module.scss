@@ -12,7 +12,7 @@
   .title {
     text-transform: uppercase;
     font-family: $primary-font;
-    margin-bottom: 0;
+    margin-bottom: 0.5rem;
     letter-spacing: 0.5px;
   }
 
@@ -29,7 +29,7 @@
 // BUTTONS SECTION
 .buttons {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
 }
 
 // MESSAGE SECTION

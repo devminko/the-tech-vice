@@ -1,18 +1,36 @@
 import React, { } from 'react';
+import { connect } from 'react-redux';
 import { TiShoppingCart } from 'react-icons/ti';
+
+import { toggleCartVisibility } from '../../redux/cart/cart.actions';
+
+import Cart from '../cart/Cart';
 
 import style from './cart-icon.module.scss';
 
 // *************************** CART ICON COMPONENT *************************** //
-const CartIcon = () => {
+const CartIcon = ({ isCartVisible, toggleCartVisibility }) => {
+  // 'isCartVisible' 'toggleCartVisibility' passed down as props via redux
   return (
-    <div className={style.carticon}>
+    <div onClick={toggleCartVisibility} className={style.carticon}>
       <TiShoppingCart className={style.icon} />
       <div className={style.totals}>
         <span className={style.quantity}>0</span>
       </div>
+      {
+        isCartVisible && <Cart />
+      }
     </div>
   )
 };
 
-export default CartIcon;
+// REDUX
+const mapStateToProps = (state) => ({
+  isCartVisible: state.cart.isCartVisible,
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  toggleCartVisibility: () => dispatch(toggleCartVisibility()),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(CartIcon);

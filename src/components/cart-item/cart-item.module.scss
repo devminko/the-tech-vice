@@ -1,0 +1,87 @@
+@import '../../styles/global.styles';
+
+.cartitem {
+  display: grid;
+  grid-template-columns: 35% 65%;
+  grid-gap: 0.5rem;
+
+  border-top: 1px solid $lightgrey;
+  border-bottom: 1px solid $lightgrey;
+
+  padding: 0.5rem 0.5rem;
+}
+
+// IMAGE SECTION
+.image {
+  width: 100%;
+  margin: auto 0;
+}
+
+// ITEM SECTION
+.item {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+
+  .title {
+    grid-row: 1 / 2;
+    font-size: 1.4rem;
+    font-family: $primary-font;
+  }
+
+  .subtitle {
+    grid-row: 2 / 3;
+    font-size: 1.15rem;
+    color: $secondary-color;
+    font-style: italic;
+  }
+
+  .totalsContainer {
+    grid-row: 3 / 4;
+    font-size: 1.15rem;
+    display: flex;
+    justify-content: space-between;
+    
+    .totals {
+      letter-spacing: 0.5px;
+    }
+    
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.2rem;
+
+      .add {
+        margin-left: 0.5rem;
+        
+        &:hover {
+          color: $secondary-color;
+        }
+      }
+
+      .remove {
+        margin-left: 0.5rem;
+
+        &:hover {
+          color: $secondary-color;
+        }
+      }
+    }
+  }
+
+}
+
+// MEDIA QUERIES
+@media screen and (max-width: 500px) {
+  .cartitem {
+
+    .item {
+      .title {
+        display: flex;
+      }
+
+      .subtitle {
+        display: flex;
+      }
+    }
+  }
+}
