@@ -4,7 +4,7 @@
 .cart {
   position: absolute;
   z-index: 5;
-  top: 6rem;
+  top: 5.75rem;
   right: 0; 
   min-height: 35%;
   max-height: 45%;
@@ -27,7 +27,7 @@
 
   .items {
     padding: 1rem;
-    overflow: scroll;
+    overflow: auto;
 
     .emptyMessage {
       display: flex;
@@ -50,7 +50,7 @@
     align-items: center;
     font-family: $primary-font;
 
-    .count {
+    .quantity {
 
     }
 
@@ -78,6 +78,6 @@
     width: 75%;
     top: 13.75%;
     min-height: 40%;
-    height: auto;
+    max-height: 50%;
   }
 }
