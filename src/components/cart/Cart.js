@@ -1,5 +1,6 @@
 import React, { } from 'react';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 
 import CartItem from '../cart-item/CartItem';
 import Button from '../button/Button';
@@ -7,8 +8,8 @@ import Button from '../button/Button';
 import style from './cart.module.scss';
 
 // *************************** CART COMPONENT *************************** //
-const Cart = ({ currentUser, cartItems }) => {
-  // 'currentUser' passed as prop via redux
+const Cart = ({ currentUser, cartItems, history }) => {
+  // 'currentUser' passed as prop via redux, 'history' passed as prop via withRouter
   return (
     <div className={style.cart}>
 
@@ -34,7 +35,7 @@ const Cart = ({ currentUser, cartItems }) => {
         }
       </div>
 
-      <Button>Checkout</Button>
+      <Button onClick={() => history.push('/checkout')}>Checkout</Button>
 
     </div>
   )
@@ -46,4 +47,4 @@ const mapStateToProps = (state) => ({
   cartItems: state.cart.cartItems,
 });
 
-export default connect(mapStateToProps)(Cart);
+export default withRouter(connect(mapStateToProps)(Cart));

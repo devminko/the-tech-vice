@@ -7,6 +7,8 @@ import { setCurrentUser } from '../redux/user/user.actions';
 
 import Header from '../pages/header/Header';
 import HomePage from '../pages/home-page/HomePage';
+import ShopPage from '../pages/shop-page/ShopPage';
+import CheckoutPage from '../pages/checkout-page/CheckoutPage';
 import SigninPage from '../pages/signin-page/SigninPage';
 import SignupPage from '../pages/signup-page/SignupPage';
 import Footer from '../pages/footer/Footer';
@@ -45,25 +47,27 @@ class AppRouter extends Component {
     return (
       <div>
 
-      <div className={style.container}>
-        <BrowserRouter>
-        <div className={style.content}>
-          <Header />
-          <Switch>
-            <Route exact path='/' component={HomePage} />
-            <Route exact path='/signin' render={() => (
-              this.props.currentUser
-              ? (<Redirect to='/' />) : (<SigninPage />)
-            )}/>
-            <Route exact path='/signin/signup' render={() => (
-              this.props.currentUser
-              ? (<Redirect to='/' />) : (<SignupPage />)
-            )}/>
-          </Switch>
+        <div className={style.container}>
+          <BrowserRouter>
+          <div className={style.content}>
+            <Header />
+            <Switch>
+              <Route exact path='/' component={HomePage} />
+              <Route exact path='/shop' component={ShopPage} />
+              <Route exact path='/checkout' component={CheckoutPage} />
+              <Route exact path='/signin' render={() => (
+                this.props.currentUser
+                ? (<Redirect to='/' />) : (<SigninPage />)
+              )}/>
+              <Route exact path='/signin/signup' render={() => (
+                this.props.currentUser
+                ? (<Redirect to='/' />) : (<SignupPage />)
+              )}/>
+            </Switch>
+          </div>
+            <Footer />
+          </BrowserRouter>
         </div>
-          <Footer />
-        </BrowserRouter>
-      </div>
 
     </div>
     )

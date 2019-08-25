@@ -1,8 +1,8 @@
 import { TOGGLE_CART_VISIBILITY } from './cart.types';
 
 const INITIAL_STATE = {
-  isCartVisible: true,
-  cartItems: [1],
+  isCartVisible: false,
+  cartItems: [],
 };
 
 export const cartReducer = (state = INITIAL_STATE, action) => {

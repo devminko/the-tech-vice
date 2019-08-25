@@ -1,0 +1,82 @@
+@import '../../styles/global.styles';
+
+// SHOP PREVIEW
+.shopPreview {
+  
+}
+
+// HEADER SECTION
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .title {
+    font-family: $title-font;
+    color: $secondary-color;
+  }
+
+  .link {
+
+    .text {
+      color: $black;
+      margin-right: 5px;
+      text-transform: uppercase;
+      font-family: $source-sans-font;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      border-bottom: 2px solid $black;
+
+      &:hover {
+        color: $secondary-color;
+        transition: color 200ms ease-in;
+      }
+    }
+
+    .symbol {
+      color: $black;
+      font-size: 2rem;
+      &:hover {
+        color: $secondary-color;
+        transition: color 200ms ease-in;
+      }
+    }
+  }
+}
+
+// SHOPITEM.js CONTAINER SECTION
+.container {
+  display: grid;
+  // grid-template-columns: repeat(auto-fill, minmax(18%, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
+  grid-template-rows: auto;
+  grid-gap: 1rem;
+}
+
+// MEDIA QUERIES
+@media screen and (max-width: 500px) {
+  .header {
+
+    .title {
+
+    }
+
+    .link {
+
+      .text {
+        font-size: 1.3rem;
+      }
+
+      .symbol {
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    grid-template-rows: auto;
+    grid-gap: 1rem;
+  }
+}
