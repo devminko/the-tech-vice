@@ -7,15 +7,15 @@
   top: 6rem;
   right: 0; 
   min-height: 35%;
-  height: auto;
+  max-height: 45%;
   width: 25%;
   background: white;
-  opacity: .90;
+  opacity: .95;
 
   display: flex;
   flex-direction: column;
 
-  border-top: 1px solid $lightgrey;
+  border-top: 1px solid lighten($lightgrey, 5%);
 
   .title {
     text-align: center;
@@ -27,7 +27,7 @@
 
   .items {
     padding: 1rem;
-    // margin-top: auto;
+    overflow: scroll;
 
     .emptyMessage {
       display: flex;
@@ -43,6 +43,7 @@
   .totals {
     margin-top: auto;
     font-size: 1.5rem;
+    padding: 1.5rem 0;
 
     display: flex;
     justify-content: space-around;
@@ -60,6 +61,8 @@
 
   button {
     margin-top: auto;
+    color: $secondary-color;
+    
     &:hover {
       background: $secondary-color;
       color: $black;

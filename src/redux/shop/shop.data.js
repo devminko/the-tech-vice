@@ -31,7 +31,6 @@ export const SHOP_DATA = [
         price: 125,
         inventory: 10,
         images: [
-          'https://mechanicalkeyboards.com/shop/images/products/large_4284_large_DKON1787ST-USPDAZT1_main.jpg',
           'https://mechanicalkeyboards.com/shop/images/products/large_4284_large_DKON1787ST-USPDAZT1_2.jpg',
           'https://mechanicalkeyboards.com/shop/images/products/large_4284_large_DKON1787ST-USPDAZT1_1.jpg',
         ]
@@ -47,7 +46,6 @@ export const SHOP_DATA = [
         price: 125,
         inventory: 10,
         images: [
-          'https://mechanicalkeyboards.com/shop/images/products/large_4284_large_DKON1787ST-USPDAZT1_main.jpg',
           'https://mechanicalkeyboards.com/shop/images/products/large_4284_large_DKON1787ST-USPDAZT1_2.jpg',
           'https://mechanicalkeyboards.com/shop/images/products/large_4284_large_DKON1787ST-USPDAZT1_1.jpg',
         ]

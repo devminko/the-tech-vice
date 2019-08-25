@@ -5,7 +5,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(10rem, 20rem));
   grid-template-rows: auto;
-  border-bottom: 1px solid lighten($lightgrey, 6%);
+  // border-bottom: 1px solid lighten($lightgrey, 6%);
   
   &:hover {
     background: $white;
@@ -56,13 +56,10 @@
     .link {
       color: $black;
       margin-right: 3rem;
-      // font-family: $primary-font;
       font-family: $source-sans-font;
-      // font-family: $raleway-font;
       font-weight: bold;
       letter-spacing: 0.25px;
       cursor: pointer;
-      // display: flex;
 
       &:hover {
         color: $secondary-color;

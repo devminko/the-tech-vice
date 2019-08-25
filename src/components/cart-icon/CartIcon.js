@@ -13,7 +13,7 @@ const CartIcon = ({ isCartVisible, toggleCartVisibility }) => {
   // 'isCartVisible' 'toggleCartVisibility' passed down as props via redux
   return (
     <div onClick={toggleCartVisibility} className={style.carticon}>
-      <TiShoppingCart className={style.icon} />
+      <TiShoppingCart className={isCartVisible ? style.iconOpen : style.icon} />
       <div className={style.totals}>
         <span className={style.quantity}>0</span>
       </div>

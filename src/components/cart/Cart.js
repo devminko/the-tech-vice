@@ -8,7 +8,7 @@ import Button from '../button/Button';
 import style from './cart.module.scss';
 
 // *************************** CART COMPONENT *************************** //
-const Cart = ({ currentUser, cartItems, history }) => {
+const Cart = ({ cartItems, history }) => {
   // 'currentUser' passed as prop via redux, 'history' passed as prop via withRouter
   return (
     <div className={style.cart}>
@@ -18,7 +18,7 @@ const Cart = ({ currentUser, cartItems, history }) => {
       <div className={style.items}>
         {
           cartItems.length
-          ? <CartItem />
+          ? cartItems.map(cartItem => <CartItem key={cartItem.id} cartItem={cartItem} />)
           : <span className={style.emptyMessage}>Your Cart is Empty!</span>
         }
       </div>
@@ -43,7 +43,6 @@ const Cart = ({ currentUser, cartItems, history }) => {
 
 // REDUX
 const mapStateToProps = (state) => ({
-  currentUser: state.user.currentUser,
   cartItems: state.cart.cartItems,
 });
 

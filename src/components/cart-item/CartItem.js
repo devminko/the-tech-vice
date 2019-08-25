@@ -1,24 +1,30 @@
 import React, { } from 'react';
+import { connect } from 'react-redux';
+
+import { addItem, removeItem } from '../../redux/cart/cart.actions';
 
 import style from './cart-item.module.scss';
 
 // *************************** CART ITEM COMPONENT *************************** //
-const CartItem = () => {
+const CartItem = ({ cartItem, addItem, removeItem }) => {
+  // 'cartItem' passed down as prop via Cart.js and destructured
+  const { brand, productName, category, price, images, quantity } = cartItem;
+
   return (
     <div className={style.cartitem}>
       
-      <img src='https://mechanicalkeyboards.com/shop/images/products/large_022C03PK102_main.jpg' alt='name' className={style.image}/>
+      <img src={images[0]} alt={productName} className={style.image}/>
 
       <div className={style.item}>
       
-        <span className={style.title}>Item Title</span>
-        <span className={style.subtitle}>Item Subtitle</span>
+        <span className={style.title}>{brand}</span>
+        <span className={style.subtitle}>{productName} - {category}</span>
 
         <div className={style.totalsContainer}>
-          <span className={style.totals}>1 x $20.00</span>
+          <span className={style.totals}>{quantity} x ${price}.00</span>
           <div className={style.buttons}>
-            <span className={style.add}>Add</span>
-            <span className={style.remove}>Remove</span>
+            <span onClick={() => addItem(cartItem)} className={style.add}>Add</span>
+            <span onClick={() => removeItem(cartItem)} className={style.remove}>Remove</span>
           </div>
         </div>
 
@@ -28,4 +34,10 @@ const CartItem = () => {
   )
 };
 
-export default CartItem;
+// REDUX
+const mapDispatchToProps = (dispatch) => ({
+  addItem: (item) => dispatch(addItem(item)),
+  removeItem: (item) => dispatch(removeItem(item)),
+});
+
+export default connect(null, mapDispatchToProps)(CartItem);

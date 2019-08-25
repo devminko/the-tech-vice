@@ -1,11 +1,16 @@
 @import '../../styles/global.styles';
 
+// SHOP ITEM
 .shopItem {
-  border: 1px solid $black;
+  border: 1px solid lighten($lightgrey, 7%);
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 1rem;
+
+  &:hover {
+    box-shadow: 1px 1px 6px 1px $lightgrey;
+  }
 }
 
 // FAVORITE SECTION
@@ -25,6 +30,10 @@
     color: $black;
     font-size: 2rem;
     cursor: pointer;
+    
+    &:hover {
+      color: $secondary-color;
+    }
   }
   
   .isFavorite {
@@ -50,23 +59,28 @@
 
   .brand {
     font-family: $primary-font;
+    font-weight: bold;
     text-transform: uppercase;
+    letter-spacing: 0.5px;
     margin-bottom: 0.25rem;
   }
 
   .productName {
     font-family: $secondary-font;
-    font-size: 1.3rem;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    color: $grey;
   }
 }
 
-
 // PRICE CONTAINER
 .priceContainer {
+  font-family: $primary-font;
+  // font-family: $secondary-font;
   font-weight: bold;
+  letter-spacing: 0.5px;
   margin-bottom: 0.5rem;
 }
-
 
 // RATINGS CONTAINER
 .ratingsContainer {
@@ -74,13 +88,26 @@
   justify-content: space-between;
   font-size: 1.2rem;
   margin-top: auto;
+  margin-bottom: 0.5rem;
   
   .ratings {
     display: flex;
   }
+
+  .inventory {
+
+  }
 }
 
-// MEDIA QUERIES
+// BUTTON SECTION
+.buttonContainer {
+  button {
+    min-width: auto;
+    width: 100%;
+  }
+}
+
+// ********************************** MEDIA QUERIES ********************************** //
 @media screen and (max-width: 500px) {
   // FAVORITE SECTION
 .favorites {
@@ -101,9 +128,39 @@
     }
   }
 
+  // HEADER SECTION
+  .header {
+    display: flex;
+    flex-direction: column;
+    
+    .brand {
+      font-size: 1.4rem;
+    }
+
+    .productName {
+      font-size: 1.2rem;
+    }
+  }
+
+  // PRICE CONTAINER
+  .priceContainer {
+    font-size: 1.25rem;
+
+    .price {
+      letter-spacing: 0.75px;
+    }
+  }
+
   // RATINGS CONTAINER
   .ratingsContainer {
     font-size: 1.1rem;
     margin-top: auto;
+  }
+
+  // BUTTON SECTION
+  .buttonContainer {
+    button {
+      height: 3rem;
+    }
   }
 }
