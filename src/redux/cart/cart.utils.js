@@ -35,3 +35,22 @@ export const removeItemFromCart = (cartItems, cartItemToRemove) => {
     ))
   };
 };
+
+// ADD ITEM TO CART
+// export const addItemToCart = (cartItems, cartItemToAdd) => {
+//   const existingCartItem = cartItems.find(cartItem => {
+//     return cartItem.id === cartItemToAdd.id
+//   });
+
+//   // 'existingCartItem' exists ? new array will be returned via cartItems.map()
+//   if (existingCartItem) {
+//     return cartItems.map(cartItem => (
+//       cartItem.id === cartItemToAdd.id
+//       ? {...cartItem, inventory: cartItem.inventory - 1, quantity: cartItem.quantity + 1}
+//       : cartItem
+//     ))
+//   };
+
+//   return [...cartItems, {...cartItemToAdd, inventory: cartItemToAdd.inventory -1, quantity: 1}];
+
+// };

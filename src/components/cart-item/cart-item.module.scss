@@ -1,6 +1,6 @@
 @import '../../styles/global.styles';
 
-.cartitem {
+.cartItem {
   display: grid;
   grid-template-columns: 35% 65%;
   grid-gap: 0.5rem;
@@ -44,6 +44,11 @@
     
     .totals {
       letter-spacing: 0.5px;
+
+      .totalsMultiplier {
+        color: $grey;
+        font-size: 0.8rem;
+      }
     }
     
     .buttons {
@@ -73,7 +78,8 @@
 
 // MEDIA QUERIES
 @media screen and (max-width: 500px) {
-  .cartitem {
+  // CART ITEM
+  .cartItem {
 
     .item {
       .title {
@@ -84,5 +90,19 @@
         display: flex;
       }
     }
+
+    .totalsContainer {
+      .totals {
+        .totalsMultiplier {
+          color: $grey;
+          font-size: 0.8rem;
+        }
+      }
+      
+      .buttons {
+        font-size: 1.1rem;
+      }
+    }
   }
+
 }

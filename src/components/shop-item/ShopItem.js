@@ -27,7 +27,6 @@ const ShopItem = ({ item, addFavorite, removeFavorite, addItem }) => {
       </div>
       
       <div className={style.imageContainer}>
-        {/* <img src={images[1] || images[0]} alt={productName} className={style.image} /> */}
         <img src={images[0]} alt={productName} className={style.image} />
       </div>
 
@@ -57,7 +56,7 @@ const ShopItem = ({ item, addFavorite, removeFavorite, addItem }) => {
 
 // REDUX
 // const mapStateToProps = (state) => ({
-//   isFavorite: state.shop.collections.map(collection => collection.items.map(item => item.isFavorite)),
+//   inventory: state.cartItems.inventory,
 // });
 
 const mapDispatchToProps = (dispatch) => ({

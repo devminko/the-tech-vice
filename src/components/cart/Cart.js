@@ -2,7 +2,7 @@ import React, { } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
-import { selectCartItemsCount } from '../../redux/cart/cart.selectors';
+import { selectCartItemsCount, selectCartTotal } from '../../redux/cart/cart.selectors';
 
 import CartItem from '../cart-item/CartItem';
 import Button from '../button/Button';
@@ -10,7 +10,7 @@ import Button from '../button/Button';
 import style from './cart.module.scss';
 
 // *************************** CART COMPONENT *************************** //
-const Cart = ({ cartItems, totalCartQuantity, history }) => {
+const Cart = ({ cartItems, totalCartQuantity, totalCartPrice, history }) => {
   // 'currentUser' passed as prop via redux, 'history' passed as prop via withRouter
   return (
     <div className={style.cart}>
@@ -31,7 +31,7 @@ const Cart = ({ cartItems, totalCartQuantity, history }) => {
           ? 
           <>
             <span className={style.quantity}>Items: {totalCartQuantity}</span>
-            <span className={style.price}>Price: $0.00</span>
+            <span className={style.price}>Price: ${totalCartPrice}.00</span>
           </>
           : null
         }
@@ -47,6 +47,7 @@ const Cart = ({ cartItems, totalCartQuantity, history }) => {
 const mapStateToProps = (state) => ({
   cartItems: state.cart.cartItems,
   totalCartQuantity: selectCartItemsCount(state),
+  totalCartPrice: selectCartTotal(state),
 });
 
 export default withRouter(connect(mapStateToProps)(Cart));

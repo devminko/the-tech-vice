@@ -11,7 +11,7 @@ const CartItem = ({ cartItem, addItem, removeItem }) => {
   const { brand, productName, category, price, images, quantity } = cartItem;
 
   return (
-    <div className={style.cartitem}>
+    <div className={style.cartItem}>
       
       <img src={images[0]} alt={productName} className={style.image}/>
 
@@ -21,7 +21,9 @@ const CartItem = ({ cartItem, addItem, removeItem }) => {
         <span className={style.subtitle}>{productName} - {category}</span>
 
         <div className={style.totalsContainer}>
-          <span className={style.totals}>{quantity} x ${price}.00</span>
+          <span className={style.totals}>
+            {quantity} <span className={style.totalsMultiplier}>x</span> ${price}.00
+          </span>
           <div className={style.buttons}>
             <span onClick={() => addItem(cartItem)} className={style.add}>Add</span>
             <span onClick={() => removeItem(cartItem)} className={style.remove}>Remove</span>
