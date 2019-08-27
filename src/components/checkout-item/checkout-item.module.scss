@@ -12,6 +12,7 @@
 
 // PRODUCT CONTAINER SECTION
 .productContainer {
+  grid-column: 1 / 2;
   display: grid;
   grid-template-columns: 30% 70%;
 
@@ -32,19 +33,12 @@
 
 // PRICE SECTION
 .price {
+  grid-column: 2 / 3;
   font-size: 1.3rem;
-}
 
-// QUANTITY SECTION
-.quantity {
-  font-size: 1.3rem;
-  text-align: center;
-}
-
-// TOTAL PRICE
-.totalPrice {
-  font-size: 1.3rem;
-  text-align: right;
+  display: flex;
+  align-items: center;
+  // justify-content: flex-start;
 }
 
 // QUANTITY CONTAINER SECTION
@@ -52,6 +46,10 @@
   font-size: 1.3rem;
   text-align: center;
   grid-column: 3 / 4;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   .remove {
     font-size: 1.5rem;
@@ -70,6 +68,17 @@
     color: $secondary-color;
     cursor: pointer;
   }
+}
+
+// TOTAL PRICE
+.totalPrice {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  font-size: 1.3rem;
+  text-align: right;
+
 }
 
 // ********************************** MEDIA QUERIES ********************************** //

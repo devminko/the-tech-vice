@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { selectCartItems, selectCartItemsCount, selectCartTotal } from '../../redux/cart/cart.selectors';
 
 import CheckoutItem from '../../components/checkout-item/CheckoutItem';
+import ButtonStripeCheckout from '../../components/button-stripe-checkout/ButtonStripeCheckout';
 
 import style from './checkout-page.module.scss';
 
@@ -42,6 +43,10 @@ const CheckoutPage = ({ cartItems, totalCartQuantity, totalCartPrice }) => {
           <br />
           <span className={style.taxText}>(excluding taxes)</span>
         </span>
+      </div>
+
+      <div className={style.stripe}>
+        <ButtonStripeCheckout />
       </div>
 
     </div>

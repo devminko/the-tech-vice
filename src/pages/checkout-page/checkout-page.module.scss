@@ -91,6 +91,12 @@
   }
 }
 
+// STRIPE BUTTON CHECKOUT SECTION
+.stripe {
+  display: flex;
+  justify-content: flex-end;
+}
+
 // ********************************** MEDIA QUERIES ********************************** //
 @media screen and (min-width: 500px) {
   // HEADER SECTION
