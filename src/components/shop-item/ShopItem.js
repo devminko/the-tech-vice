@@ -1,4 +1,5 @@
 import React, { } from 'react';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { IoMdHeartEmpty, IoMdHeart  } from 'react-icons/io';
 
@@ -14,6 +15,10 @@ const ShopItem = ({ item, addFavorite, removeFavorite, addItem }) => {
   // 'item' passed down as prop from ShopPreview.js + 'addFavorite', 'removeFavorite', 'addItem' via REDUX
   const { brand, productName, category, ratings, numOfRatings, isFavorite, price, inventory, images } = item;
 
+  // Link leading to product page + removes any spaces in 'brand' or 'productName'
+  let productLink = `shop/${brand}+${productName}+${price}`;
+  productLink = productLink.replace(/\s/g, '');
+
   return (
     <div className={style.shopItem}>
 
@@ -27,7 +32,9 @@ const ShopItem = ({ item, addFavorite, removeFavorite, addItem }) => {
       </div>
       
       <div className={style.imageContainer}>
-        <img src={images[0]} alt={productName} className={style.image} />
+        <Link to={productLink} item={item}>
+          <img src={images[0]} alt={productName} className={style.image} />
+        </Link>
       </div>
 
       <div className={style.header}>

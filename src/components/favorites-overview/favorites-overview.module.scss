@@ -7,21 +7,18 @@
 // HEADER SECTION
 .header {
   margin-bottom: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 
   .title {
     font-family: $title-font;
     color: $secondary-color;
   }
 
-  .subtitle {
-    font-family: $primary-font;
-    font-size: 1.3rem;
-    text-transform: uppercase;
-    color: $grey;
-  }
+  // .subtitle {
+  //   font-family: $primary-font;
+  //   font-size: 1.3rem;
+  //   text-transform: uppercase;
+  //   color: $grey;
+  // }
 }
 
 // FAVORITES CONTAINER SECTION
@@ -46,7 +43,6 @@
   // FAVORITES CONTAINER SECTION
   .favoritesContainer {
     display: grid;
-    // grid-template-columns: repeat(auto-fill, minmax(18%, 1fr));
     grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
     grid-template-rows: auto;
     grid-gap: 1rem;

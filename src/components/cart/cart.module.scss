@@ -19,7 +19,7 @@
 
   .title {
     text-align: center;
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     margin-bottom: 1rem;
     font-family: $primary-font;
     letter-spacing: 1px;
@@ -42,7 +42,7 @@
 
   .totals {
     margin-top: auto;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     padding: 1.5rem 0;
 
     display: flex;
@@ -79,5 +79,9 @@
     top: 13.75%;
     min-height: 40%;
     max-height: 50%;
+  }
+
+  .totals {
+    font-size: 1.5rem;
   }
 }

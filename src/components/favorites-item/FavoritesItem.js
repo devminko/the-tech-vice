@@ -1,4 +1,5 @@
 import React, { } from 'react';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { IoMdHeartEmpty, IoMdHeart  } from 'react-icons/io';
 
@@ -14,6 +15,10 @@ const FavoritesItem = ({ favoriteItem, addItem }) => {
   // 'favoriteItem' passed down as prop via FavoritesOverview.js
   const { brand, productName, category, ratings, numOfRatings, isFavorite, price, inventory, images } = favoriteItem;
   
+  // Link leading to product page + removes any spaces in 'brand' or 'productName'
+  let productLink = `shop/${brand}+${productName}+${price}`;
+  productLink = productLink.replace(/\s/g, '');
+
   return (
     <div className={style.favoritesItem}>
 
@@ -27,7 +32,9 @@ const FavoritesItem = ({ favoriteItem, addItem }) => {
       </div>
       
       <div className={style.imageContainer}>
-        <img src={images[0]} alt={productName} className={style.image} />
+        <Link to={productLink} favoriteItem={favoriteItem}>
+          <img src={images[0]} alt={productName} className={style.image} />
+        </Link>
       </div>
 
       <div className={style.header}>

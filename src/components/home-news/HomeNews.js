@@ -16,6 +16,10 @@ const HomeNews = () => {
         </Link>
       </div>
 
+      <div className={style.newsContainer}>
+        <span>Currently pending updates...</span>
+      </div>
+
     </div>
   )
 };

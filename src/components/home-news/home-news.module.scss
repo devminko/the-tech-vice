@@ -44,6 +44,15 @@
   }
 }
 
+// NEWS CONTAINER SECTION
+.newsContainer {
+  font-family: $secondary-font;
+  text-transform: uppercase;
+  font-style: italic;
+  color: $grey;
+  font-size: 1.4rem;
+}
+
 // ********************************** MEDIA QUERIES ********************************** //
 @media screen and (max-width: 500px) {
   .header {

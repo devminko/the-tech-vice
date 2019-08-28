@@ -17,9 +17,11 @@ const CartItem = ({ cartItem, addItem, removeItem }) => {
       {/* <img src={images} alt={productName} className={style.image}/> */}
 
       <div className={style.item}>
-      
-        <span className={style.title}>{brand}</span>
-        <span className={style.subtitle}>{productName} - {category}</span>
+
+        <div className={style.productContainer}>
+          <span className={style.title}>{brand}</span>
+          <span className={style.subtitle}>{productName} - {category}</span>
+        </div>
 
         <div className={style.totalsContainer}>
           <span className={style.totals}>
