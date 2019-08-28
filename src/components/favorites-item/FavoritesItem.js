@@ -10,7 +10,7 @@ import Button from '../button/Button';
 import style from './favorites-item.module.scss';
 
 // *************************** FAVORITES ITEM COMPONENT *************************** //
-const FavoritesItem = ({ favoriteItem }) => {
+const FavoritesItem = ({ favoriteItem, addItem }) => {
   // 'favoriteItem' passed down as prop via FavoritesOverview.js
   const { brand, productName, category, ratings, numOfRatings, isFavorite, price, inventory, images } = favoriteItem;
   

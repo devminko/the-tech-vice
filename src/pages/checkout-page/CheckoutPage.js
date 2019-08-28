@@ -46,7 +46,7 @@ const CheckoutPage = ({ cartItems, totalCartQuantity, totalCartPrice }) => {
       </div>
 
       <div className={style.stripe}>
-        <ButtonStripeCheckout />
+        <ButtonStripeCheckout price={totalCartPrice} />
       </div>
 
     </div>

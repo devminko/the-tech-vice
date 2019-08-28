@@ -18,6 +18,7 @@ const CheckoutItem = ({ cartItem, addItem, removeItem }) => {
 
       <div className={style.productContainer}>
         <img src={images[0]} alt={productName} className={style.image} />
+        {/* <img src={images} alt={productName} className={style.image} /> */}
         <span className={style.product}>{brand} <br /> {productName}<br /> {category}</span>
       </div>
 

@@ -240,12 +240,12 @@ export const SHOP_DATA = [
     ]
   },
   // ACCESSORIES SECTION
-  // {
-  //   id: 4,
-  //   title: 'Accessories',
-  //   routeName: 'accessories',
-  //   items: [
+  {
+    id: 4,
+    title: 'Accessories',
+    routeName: 'accessories',
+    items: [
 
-  //   ]
-  // },
+    ]
+  },
 ];
