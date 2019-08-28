@@ -11,7 +11,7 @@ import style from './cart.module.scss';
 
 // *************************** CART COMPONENT *************************** //
 const Cart = ({ cartItems, totalCartQuantity, totalCartPrice, history }) => {
-  // 'currentUser' passed as prop via redux, 'history' passed as prop via withRouter
+  // 'toggleCartVisibility' passed as prop via redux, 'history' passed as prop via withRouter
   return (
     <div className={style.cart}>
 

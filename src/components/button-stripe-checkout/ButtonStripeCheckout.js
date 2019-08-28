@@ -17,13 +17,13 @@ const ButtonStripeCheckout = ({ price }) => {
   // full list of props | settings available @ https://github.com/azmenak/react-stripe-checkout
   return (
     <StripeCheckout 
-      label='Pay now'
+      label='Checkout'
       name='Tech Vice'
       billingAddress
       shippingAddress
       description={`Youre total is $${price}`}
       amount={priceInCents}
-      panelLabel='Pay Now'
+      panelLabel='Checkout'
       token={onToken} 
       stripeKey={publishableKey}
     />

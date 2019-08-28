@@ -6,7 +6,7 @@
 
   border-top: 1px solid lighten($lightgrey, 7%);
   border-bottom: 1px solid lighten($lightgrey, 7%);
-  padding: 1rem 0;
+  padding: 1rem 1rem;
   margin-bottom: 0.5rem;
 }
 
@@ -21,13 +21,32 @@
     grid-column: 1 / 2;
     width: 100%;
     padding-right: 0.5rem;
+    margin: auto 0;
   }
 
   // PRODUCT SECTION
   .product {
     grid-column: 2 / 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
     font-size: 1.3rem;
     padding-left: 0.5rem;
+
+    .brand {
+      color: $secondary-color;
+    }
+    
+    .productName {
+      color: $black;
+      font-size: 1.1rem;
+    }
+
+    .category {
+      color: $grey;
+      font-size: 1.1rem;
+    }
   }
 }
 
@@ -38,7 +57,6 @@
 
   display: flex;
   align-items: center;
-  // justify-content: flex-start;
 }
 
 // QUANTITY CONTAINER SECTION
@@ -49,11 +67,10 @@
 
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 
   .remove {
     font-size: 1.5rem;
-    font-weight: bolder;
     color: $secondary-color;
     cursor: pointer;
   }
@@ -64,7 +81,6 @@
 
   .add {
     font-size: 1.5rem;
-    font-weight: bolder;
     color: $secondary-color;
     cursor: pointer;
   }
@@ -78,10 +94,67 @@
 
   font-size: 1.3rem;
   text-align: right;
-
 }
 
 // ********************************** MEDIA QUERIES ********************************** //
 @media screen and (min-width: 500px) {
+  .checkoutItem {
+    padding: 1rem 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  // PRODUCT CONTAINER SECTION
+  .productContainer {
+    .product {
+      grid-column: 2 / 3;
+      font-size: 1.5rem;
+      padding-left: 3rem;
+      display: flex;
+      align-items: center;
+
+      .brand {
+        color: $secondary-color;
+      }
+      
+      .productName {
+        color: $black;
+        font-size: 1.4rem;
+      }
   
+      .category {
+        color: $grey;
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  // PRICE SECTION
+  .price {
+    font-size: 1.4rem;
+  }
+
+  // QUANTITY CONTAINER SECTION
+  .quantityContainer {
+    .remove {
+      font-size: 1.8rem;
+      color: $secondary-color;
+      cursor: pointer;
+    }
+
+    .quantity {
+      margin: 0 1rem;
+      font-size: 1.4rem;
+    }
+
+    .add {
+      font-size: 1.8rem;
+      font-weight: bolder;
+      cursor: pointer;
+    }
+  }
+
+  // TOTAL PRICE
+  .totalPrice {
+    font-size: 1.4rem;
+  }
 }

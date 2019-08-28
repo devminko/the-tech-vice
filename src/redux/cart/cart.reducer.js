@@ -15,12 +15,12 @@ export const cartReducer = (state = INITIAL_STATE, action) => {
       };
     case ADD_ITEM :
       return {
-        ...state,
+        // ...state,
         cartItems: addItemToCart(state.cartItems, action.payload),
       };
     case REMOVE_ITEM :
       return {
-        ...state,
+        // ...state,
         cartItems: removeItemFromCart(state.cartItems, action.payload),
       };
     case CLEAR_ITEMS :

@@ -14,7 +14,7 @@ const FavoritesOverview = ({ favoriteItems }) => {
     <div className={style.favoritesOverview}>
 
       <div className={style.header}>
-        <h3 className={style.title}>Current Favorites</h3>
+        <h2 className={style.title}>Current Favorites</h2>
         <span className={style.subtitle}>View Your Favorites Below</span>
       </div>
 

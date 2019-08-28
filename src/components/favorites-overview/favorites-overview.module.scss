@@ -7,10 +7,13 @@
 // HEADER SECTION
 .header {
   margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
   .title {
     font-family: $title-font;
-    margin-bottom: 0.5rem;
+    color: $secondary-color;
   }
 
   .subtitle {

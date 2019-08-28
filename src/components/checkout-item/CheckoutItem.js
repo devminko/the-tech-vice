@@ -9,7 +9,7 @@ import style from './checkout-item.module.scss';
 // *************************** CHECKOUT ITEM COMPONENT  *************************** //
 const CheckoutItem = ({ cartItem, addItem, removeItem }) => {
   // 'cartItem' passed as prop via CheckoutPage.js
-  const { id, brand, productName, category, ratings, numOfRatings, isFavorite, price, inventory, images, quantity } = cartItem;
+  const { brand, productName, category, price, images, quantity } = cartItem;
 
   const totalPrice = quantity * price;
 
@@ -18,16 +18,21 @@ const CheckoutItem = ({ cartItem, addItem, removeItem }) => {
 
       <div className={style.productContainer}>
         <img src={images[0]} alt={productName} className={style.image} />
-        {/* <img src={images} alt={productName} className={style.image} /> */}
-        <span className={style.product}>{brand} <br /> {productName}<br /> {category}</span>
+        <span className={style.product}>
+          <span className={style.brand}>{brand}</span> 
+          <br /> 
+          <span className={style.productName}>{productName}</span>
+          <br /> 
+          <span className={style.category}>{category}</span>
+        </span>
       </div>
 
       <span className={style.price}>${price}</span>
 
       <div className={style.quantityContainer}>
-        <span onClick={() => removeItem(cartItem)} className={style.remove}>-</span>
+        <span onClick={() => removeItem(cartItem)} className={style.remove}>&#8722;</span>
         <span className={style.quantity}>{quantity}</span>
-        <span onClick={() => addItem(cartItem)} className={style.add}>+</span>
+        <span onClick={() => addItem(cartItem)} className={style.add}>&#43;</span>
       </div>
 
       <span className={style.totalPrice}>${totalPrice}</span>
