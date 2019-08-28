@@ -8,3 +8,8 @@ export const selectCollections = createSelector(
   [selectShop],
   shop => shop.collections,
 );
+
+export const selectFavoriteItems = createSelector(
+  [selectShop],
+  shop => shop.favoriteItems,
+)

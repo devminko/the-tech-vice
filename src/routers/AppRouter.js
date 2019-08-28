@@ -8,6 +8,7 @@ import { setCurrentUser } from '../redux/user/user.actions';
 import Header from '../pages/header/Header';
 import HomePage from '../pages/home-page/HomePage';
 import ShopPage from '../pages/shop-page/ShopPage';
+import FavoritesPage from '../pages/favorites-page/FavoritesPage';
 import CheckoutPage from '../pages/checkout-page/CheckoutPage';
 import SigninPage from '../pages/signin-page/SigninPage';
 import SignupPage from '../pages/signup-page/SignupPage';
@@ -54,6 +55,7 @@ class AppRouter extends Component {
             <Switch>
               <Route exact path='/' component={HomePage} />
               <Route exact path='/shop' component={ShopPage} />
+              <Route exact path='/favorites' component={FavoritesPage} />
               <Route exact path='/checkout' component={CheckoutPage} />
               <Route exact path='/signin' render={() => (
                 this.props.currentUser

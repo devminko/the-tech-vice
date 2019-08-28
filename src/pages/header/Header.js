@@ -29,7 +29,7 @@ const Header = ({ currentUser }) => {
               <NavLink to='/news' className={style.link} activeClassName={style.isActive}>News</NavLink>
             </li>
             <li>
-              <NavLink to='/about' className={style.link} activeClassName={style.isActive}>About Us</NavLink>
+              <NavLink to='/favorites' className={style.link} activeClassName={style.isActive}>Favorites</NavLink>
             </li>
             <li>
               {

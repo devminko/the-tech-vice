@@ -1,0 +1,54 @@
+@import '../../styles/global.styles';
+
+.favoritesOverview {
+  
+}
+
+// HEADER SECTION
+.header {
+  margin-bottom: 1rem;
+
+  .title {
+    font-family: $title-font;
+    margin-bottom: 0.5rem;
+  }
+
+  .subtitle {
+    font-family: $primary-font;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    color: $grey;
+  }
+}
+
+// FAVORITES CONTAINER SECTION
+.favoritesContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  grid-template-rows: auto;
+  grid-gap: 1rem;
+
+  .emptyMessage {
+    grid-column: 1 / -1;
+    color: $grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+// ********************************** MEDIA QUERIES ********************************** //
+@media screen and (min-width: 500px) {
+  
+  // FAVORITES CONTAINER SECTION
+  .favoritesContainer {
+    display: grid;
+    // grid-template-columns: repeat(auto-fill, minmax(18%, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
+    grid-template-rows: auto;
+    grid-gap: 1rem;
+  
+    // border-bottom: 1px solid lighten($lightgrey, 7%);
+    padding-bottom: 2rem;
+  }
+}
