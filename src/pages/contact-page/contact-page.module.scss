@@ -1,10 +1,87 @@
 @import '../../styles/global.styles';
 
+// CONTACT PAGE
 .contactPage {
   padding: 0 1rem 1rem 1rem;
 }
 
+// CONTACT LANDING
+.contactLanding {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15vh;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url('../../assets/landing_two.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .title {
+    font-size: 3rem;
+    color: $white;
+    font-family: $title-font;
+  }
+}
+
+// HEADER SECTION
+.header {
+
+  .subtitle {
+    text-transform: uppercase;
+    font-family: $primary-font;
+  }
+}
+
+// NUMBER SECTION
+.numberContainer {
+  font-size: 1.4rem;
+
+  .number {
+
+  }
+}
+
+// EMAIL SECTION
+.emailContainer {
+  font-size: 1.4rem;
+
+  .email {
+
+    .link {
+
+    }
+  }
+}
+
 // ********************************** MEDIA QUERIES ********************************** //
 @media screen and (min-width: 500px) {
+  .contactPage {
 
+  }
+
+  // CONTACT LANDING
+  .contactLanding {
+    height: 15vh;
+  }
+
+  // NUMBER SECTION
+  .numberContainer {
+    font-size: 1.6rem;
+    
+    .number {
+
+    }
+  }
+
+  // EMAIL SECTION
+  .emailContainer {
+    font-size: 1.6rem;
+
+    .email {
+
+      .link {
+
+      }
+    }
+  }
 }

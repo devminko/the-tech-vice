@@ -18,23 +18,21 @@
   justify-content: center;
   text-align: center;
   text-transform: uppercase;
-  
   font-family: $source-sans-font;
   letter-spacing: 0.25px;
 
   .text {
-    font-size: 2rem;
-    // color: $white;
-
     background: $white;
     padding: 3rem;
     opacity: 0.80;
+    font-size: 2rem;
   }
 
   .link {
     font-size: 1.4rem;
     color: blue;
     text-decoration: underline;
+    text-transform: capitalize;
   }
 }
 
@@ -43,11 +41,11 @@
   // CONTENT SECTION
   .content {
     .text {
-      font-size: 2.5rem;
+      font-size: 2.2rem;
     }
 
     .link {
-      font-size: 1.8rem;
+      font-size: 1.6rem;
     }
   }
 }

@@ -10,7 +10,7 @@ const AboutPage = () => {
       <div className={style.aboutLanding} />
 
       <div className={style.header}>
-        <h2 className={style.title}>We Are What We Love</h2>
+        <h2 className={style.title}>We Are Who We Are</h2>
       </div>
 
       <div className={style.textContainer}>
@@ -23,6 +23,10 @@ const AboutPage = () => {
         <p className={style.text}>
           Although Refinery29 does introduce its page with a description of its business, its goes out on a bang -- four bangs, to be exact. The organization is on a "mission," sure, but there's also an "essence" of Refinery29, a "promise" it keeps, and a "vibe" it gives off.
         </p>
+      </div>
+
+      <div className={style.header}>
+        <h2 className={style.title}>Unadulterated Tech Love</h2>
       </div>
 
     </div>

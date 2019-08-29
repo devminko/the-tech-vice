@@ -31,6 +31,7 @@
   .text {
     font-size: 1.3rem;
     font-family: $source-sans-font;
+    text-align: justify;
   }
 }
 
@@ -42,7 +43,7 @@
 
   // ABOUT LANDING SECTION
   .aboutLanding {
-
+    height: 40vh;
   }
 
   // HEADER SECTION
@@ -54,7 +55,7 @@
 
   // TEXT SECTION
   .textContainer {
-    padding: 0 10rem;
+    padding: 0 20rem;
 
     .text {
       font-size: 1.5rem;
