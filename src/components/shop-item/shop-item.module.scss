@@ -49,6 +49,7 @@
   .image {
     width: 100%;
     margin-bottom: 1rem;
+    max-height: 18rem;
   }
 }
 
@@ -67,6 +68,13 @@
   }
 
   .productName {
+    font-family: $secondary-font;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    color: $grey;
+  }
+
+  .category {
     font-family: $secondary-font;
     font-size: 1.25rem;
     text-transform: uppercase;

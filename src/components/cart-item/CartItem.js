@@ -20,7 +20,9 @@ const CartItem = ({ cartItem, addItem, removeItem }) => {
 
         <div className={style.productContainer}>
           <span className={style.title}>{brand}</span>
-          <span className={style.subtitle}>{productName} - {category}</span>
+          {/* <span className={style.subtitle}>{productName} - {category}</span> */}
+          <span className={style.subtitle}>{productName}</span>
+          <span className={style.category}>{category}</span>
         </div>
 
         <div className={style.totalsContainer}>

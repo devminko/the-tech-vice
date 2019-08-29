@@ -32,7 +32,7 @@ const FavoritesItem = ({ favoriteItem, addItem }) => {
       </div>
       
       <div className={style.imageContainer}>
-        <Link to={productLink} favoriteItem={favoriteItem}>
+        <Link to={productLink} item={favoriteItem}>
           <img src={images[0]} alt={productName} className={style.image} />
         </Link>
       </div>

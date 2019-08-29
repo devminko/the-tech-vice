@@ -32,6 +32,7 @@
       grid-row: 1 / 2;
       font-size: 1.2rem;
       font-family: $primary-font;
+      color: $secondary-color;
 
       margin-bottom: 0.25rem;
     }
@@ -39,10 +40,18 @@
     .subtitle {
       grid-row: 2 / 3;
       font-size: 1.1rem;
-      color: $secondary-color;
+      // color: $secondary-color;
       font-style: italic;
       text-align: justify;
+      margin-bottom: 0.25rem;
+    }
 
+    .category {
+      grid-row: 3 / 4;
+      font-size: 1.1rem;
+      color: $grey;
+      font-style: italic;
+      text-align: justify;
       margin-bottom: 0.25rem;
     }
   }

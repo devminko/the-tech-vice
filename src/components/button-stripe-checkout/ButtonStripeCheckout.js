@@ -9,7 +9,7 @@ const ButtonStripeCheckout = ({ price }) => {
 
   const onToken = (token) => {
     console.log(token);
-    alert('Payment Successful!')
+    alert('Payment Successful!');
   };
 
   // Default US Card = 4242 4242 4242 4242 - Exp: 01/20 - CVV: 123

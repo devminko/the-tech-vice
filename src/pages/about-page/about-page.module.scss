@@ -1,0 +1,61 @@
+@import '../../styles/global.styles';
+
+// ABOUT PAGE
+.aboutPage {
+  padding: 0 1rem 1rem 1rem;
+}
+
+// ABOUT LANDING SECTION
+.aboutLanding {
+  height: 30vh;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url('../../assets/landing_three.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+// HEADER SECTION
+.header {
+
+  .title {
+    font-family: $title-font;
+    color: $secondary-color;
+    text-align: center;
+  }
+}
+
+// TEXT SECTION
+.textContainer {
+  padding: 0 2rem;
+
+  .text {
+    font-size: 1.3rem;
+    font-family: $source-sans-font;
+  }
+}
+
+// ********************************** MEDIA QUERIES ********************************** //
+@media screen and (min-width: 500px) {
+  .aboutPage {
+    
+  }
+
+  // ABOUT LANDING SECTION
+  .aboutLanding {
+
+  }
+
+  // HEADER SECTION
+  .header {
+    .title {
+      // text-align: justify;
+    }
+  }
+
+  // TEXT SECTION
+  .textContainer {
+    .text {
+      font-size: 1.5rem;
+    }
+  }
+}

@@ -10,6 +10,9 @@ import HomePage from '../pages/home-page/HomePage';
 import ShopPage from '../pages/shop-page/ShopPage';
 import FavoritesPage from '../pages/favorites-page/FavoritesPage';
 import CheckoutPage from '../pages/checkout-page/CheckoutPage';
+import AboutPage from '../pages/about-page/AboutPage';
+import ConnectPage from '../pages/connect-page/ConnectPage';
+import ContactPage from '../pages/contact-page/ContactPage';
 import SigninPage from '../pages/signin-page/SigninPage';
 import SignupPage from '../pages/signup-page/SignupPage';
 import Footer from '../pages/footer/Footer';
@@ -57,6 +60,9 @@ class AppRouter extends Component {
               <Route exact path='/shop' component={ShopPage} />
               <Route exact path='/favorites' component={FavoritesPage} />
               <Route exact path='/checkout' component={CheckoutPage} />
+              <Route exact path='/about' component={AboutPage} />
+              <Route exact path='/connect' component={ConnectPage} />
+              <Route exact path='/contact' component={ContactPage} />
               <Route exact path='/signin' render={() => (
                 this.props.currentUser
                 ? (<Redirect to='/' />) : (<SigninPage />)

@@ -39,7 +39,9 @@ const ShopItem = ({ item, addFavorite, removeFavorite, addItem }) => {
 
       <div className={style.header}>
         <span className={style.brand}>{brand}</span>
-        <span className={style.productName}>{productName} - {`(${category})`}</span>
+        {/* <span className={style.productName}>{productName} - {`(${category})`}</span> */}
+        <span className={style.productName}>{productName}</span>
+        <span className={style.category}>{`(${category})`}</span>
       </div>
 
       <div className={style.priceContainer}>
