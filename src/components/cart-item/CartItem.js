@@ -14,7 +14,6 @@ const CartItem = ({ cartItem, addItem, removeItem }) => {
     <div className={style.cartItem}>
       
       <img src={images[0]} alt={productName} className={style.image}/>
-      {/* <img src={images} alt={productName} className={style.image}/> */}
 
       <div className={style.item}>
 

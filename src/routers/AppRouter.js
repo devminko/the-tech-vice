@@ -15,6 +15,7 @@ import ConnectPage from '../pages/connect-page/ConnectPage';
 import ContactPage from '../pages/contact-page/ContactPage';
 import SigninPage from '../pages/signin-page/SigninPage';
 import SignupPage from '../pages/signup-page/SignupPage';
+import NotFoundPage from '../pages/404-page/NotFoundPage';
 import Footer from '../pages/footer/Footer';
 
 import style from './app-router.module.scss';
@@ -71,6 +72,7 @@ class AppRouter extends Component {
                 this.props.currentUser
                 ? (<Redirect to='/' />) : (<SignupPage />)
               )}/>
+              <Route component={NotFoundPage} />
             </Switch>
           </div>
             <Footer />

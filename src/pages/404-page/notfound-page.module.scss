@@ -1,0 +1,53 @@
+@import '../../styles/global.styles';
+
+.notfoundPage {
+  padding: 1rem 1rem 1rem 1rem;
+  height: 70vh;
+}
+
+// CONTENT SECTION
+.content {
+  height: 100%;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url('../../assets/not-found-page_two.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-transform: uppercase;
+  
+  font-family: $source-sans-font;
+  letter-spacing: 0.25px;
+
+  .text {
+    font-size: 2rem;
+    // color: $white;
+
+    background: $white;
+    padding: 3rem;
+    opacity: 0.80;
+  }
+
+  .link {
+    font-size: 1.4rem;
+    color: blue;
+    text-decoration: underline;
+  }
+}
+
+// ********************************** MEDIA QUERIES ********************************** //
+@media screen and (min-width: 500px) {
+  // CONTENT SECTION
+  .content {
+    .text {
+      font-size: 2.5rem;
+    }
+
+    .link {
+      font-size: 1.8rem;
+    }
+  }
+}
