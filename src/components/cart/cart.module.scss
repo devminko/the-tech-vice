@@ -4,11 +4,12 @@
 .cart {
   position: absolute;
   z-index: 5;
-  top: 5.75rem;
   right: 0; 
-  min-height: 35%;
-  max-height: 45%;
-  width: 25%;
+  width: 75%;
+  // top: 13.75%;
+  top: 13rem;
+  min-height: 40%;
+  max-height: 50%;
   background: $white;
   opacity: .95;
 
@@ -16,6 +17,7 @@
   flex-direction: column;
 
   border-top: 1px solid lighten($lightgrey, 5%);
+
 
   .title {
     text-align: center;
@@ -73,15 +75,38 @@
 }
 
 // ********************************** MEDIA QUERIES ********************************** //
-@media screen and (max-width: 500px) {
+@media screen and (min-width: 500px) {
   .cart {
-    width: 75%;
-    top: 13.75%;
-    min-height: 40%;
-    max-height: 50%;
+    // top: 5.75rem;
+    top: 8rem;
+    min-height: 35%;
+    max-height: 45%;
+    width: 35%;
   }
 
   .totals {
     font-size: 1.5rem;
+  }
+}
+
+// 800px MEDIA QUERY
+@media screen and (min-width: 800px) {
+  .cart {
+    width: 25%;
+  }
+}
+
+// 1600px MEDIA QUERY
+@media screen and (min-width: 1600px) {
+  .cart {
+    width: 20%;
+  }
+}
+
+// 1800px MEDIA QUERY
+@media screen and (min-width: 1800px) {
+  .cart {
+    width: 15%;
+    right: 29.5rem;
   }
 }

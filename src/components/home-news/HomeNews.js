@@ -17,7 +17,7 @@ const HomeNews = () => {
       </div>
 
       <div className={style.newsContainer}>
-        <span>Currently pending updates...</span>
+        <span>Currently pending news...</span>
       </div>
 
     </div>
