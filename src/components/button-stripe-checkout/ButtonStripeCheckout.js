@@ -24,7 +24,7 @@ const ButtonStripeCheckout = ({ price, history, emptyCart }) => {
   return (
     <StripeCheckout 
       label='Checkout'
-      name='Confirm Details Below'
+      name='Confirm Details'
       billingAddress
       shippingAddress
       description={`Youre total is $${price}`}
